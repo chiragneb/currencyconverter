@@ -3,7 +3,6 @@ import CurrencyInput from './CurrencyInput';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
-
 function App() {
   const [amount1, setAmount1] = useState(1);
   const [amount2, setAmount2] = useState(1);
