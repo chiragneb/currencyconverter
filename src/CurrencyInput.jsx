@@ -1,5 +1,6 @@
 import React from 'react'
 import propTypes from "prop-types"
+import "./App.css"
 
 const CurrencyInput = (props) => {
     return (

@@ -4,8 +4,6 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
-
-
 function App() {
   const [amount1, setAmount1] = useState(1);
   const [amount2, setAmount2] = useState(1);
@@ -74,8 +72,6 @@ function App() {
         currencies={Object.keys(rates)}
         amount={amount2}
         currency={currency2} />
-              
-
     </div>
     </section>
   );
