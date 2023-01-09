@@ -12,7 +12,7 @@ function App() {
 
   
   useEffect(() => {
-    axios.get('https://api.apilayer.com/fixer/latest?apikey=WXI3Suzg65gwhRs77Sl803g9E3gvhfok')
+      axios.get('https://open.er-api.com/v6/latest/EUR')
          .then(response => {
           setRates(response.data.rates);
          })
@@ -60,18 +60,21 @@ function App() {
       </main>
       <h1 className="currency-converter">Currency Converter</h1>
       <CurrencyInput
+        className = "input-form"
         onAmountChange={handleAmount1Change}
         onCurrencyChange={handleCurrency1Change}
         currencies={Object.keys(rates)}
         amount={amount1}
         currency={currency1} />
       <CurrencyInput
+        className = "input-form"
         onAmountChange={handleAmount2Change}
         onCurrencyChange={handleCurrency2Change}
         currencies={Object.keys(rates)}
         amount={amount2}
         currency={currency2} />
     </div>
+    <p>Coverted Amount for {amount1} {currency1} is {amount2} {currency2}</p>
     </section>
   );
 }
